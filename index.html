@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joanne L. Smikle, PhD | Keynote Speaker on Leadership & Organization Development</title>
+    <meta name="description" content="Dr. Joanne L. Smikle is a respected authority on leadership and organization development. Keynotes, workshops, and retreats. Watch her videos and listen to the SmikleSpeaks Podcast.">
+    <meta property="og:title" content="Joanne L. Smikle, PhD | Keynote Speaker">
+    <meta property="og:description" content="Keynotes, workshops, and retreats on leadership and organization development. Videos, podcast, and more.">
+    <meta property="og:image" content="https://joanne.keynotesunlimited.com/img/joanne-6.jpg">
+    <meta property="og:url" content="https://joanne.keynotesunlimited.com/">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+:root {
+    --black: #000000;
+    --gold-300: #e8c766;
+    --gold-500: #c9a13b;
+    --gold-700: #9a7420;
+    --gold-800: #7a5a14;
+    --paper: #f1f0ee;
+    --white: #ffffff;
+    --line: #dedbd3;
+    --ink: #1a1a1a;
+    --ink-muted: #4a4742;
+    --ivory: #efe6d0;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--ink);
+    background: var(--paper);
+}
+
+a { color: var(--gold-800); }
+
+.wrap { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* Watermark of faint grey headshots behind the page */
+.watermark {
+    position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none;
+    opacity: 0.06; filter: grayscale(1) contrast(1.1); mix-blend-mode: multiply;
+}
+.watermark span {
+    position: absolute; width: 170px; height: 170px;
+    background-size: cover; background-position: center 20%;
+    clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+/* Top bar */
+.topbar {
+    position: sticky; top: 0; z-index: 20;
+    background: var(--black); border-bottom: 2px solid var(--gold-500);
+}
+.topbar .wrap { display: flex; align-items: center; gap: 24px; min-height: 56px; }
+.topbar .brand img { height: 40px; width: auto; display: block; mix-blend-mode: screen; }
+.topbar nav { display: flex; gap: 22px; margin-left: auto; align-items: center; }
+.topbar nav a { color: var(--ivory); text-decoration: none; font-size: 0.95rem; }
+.topbar nav a:hover { color: var(--gold-300); }
+.topbar nav .back { color: var(--gold-300); font-weight: 600; }
+
+/* Hero */
+.hero { background: var(--black); color: var(--ivory); border-bottom: 4px solid var(--gold-500); }
+.hero .wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; padding-top: 50px; padding-bottom: 50px; }
+.hero .eyebrow { color: var(--gold-500); text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.8rem; margin-bottom: 10px; }
+.hero h1 { font-size: 3rem; line-height: 1.1; color: var(--gold-300); letter-spacing: -1px; margin-bottom: 18px; }
+.hero p.lead { font-size: 1.2rem; font-weight: 300; line-height: 1.6; margin-bottom: 26px; font-style: italic; }
+.hero .photo { justify-self: center; width: min(360px, 100%); }
+.hero .photo img { width: 100%; height: auto; display: block; border: 1px solid var(--gold-700); border-radius: 6px; }
+
+.btns { display: flex; flex-wrap: wrap; gap: 12px; }
+.btn {
+    display: inline-block; padding: 12px 22px; border-radius: 4px; text-decoration: none;
+    font-weight: 600; font-size: 0.95rem; border: 1px solid var(--gold-500);
+    background: var(--gold-500); color: var(--black); transition: background .2s, color .2s;
+}
+.btn:hover { background: var(--gold-300); }
+.btn.ghost { background: transparent; color: var(--gold-300); }
+.btn.ghost:hover { background: rgba(232, 199, 102, 0.12); }
+
+/* Sections */
+section.block { padding: 64px 0 8px; }
+h2.title { font-size: 2rem; margin-bottom: 8px; }
+h2.title::after { content: "\25C6"; display: block; font-size: 0.8rem; color: var(--gold-500); margin-top: 8px; }
+.sub { color: var(--ink-muted); margin-bottom: 26px; max-width: 700px; }
+
+.card {
+    background: rgba(255, 255, 255, 0.92); border: 1px solid var(--line);
+    border-top: 4px solid var(--gold-500); border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Featured video + reel */
+.featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start; }
+.embed { aspect-ratio: 16 / 9; background: var(--black); border-radius: 6px; overflow: hidden; }
+.embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+.reel { padding: 26px; }
+.reel h3 { color: var(--gold-800); margin-bottom: 8px; }
+.reel p { color: var(--ink-muted); margin-bottom: 14px; font-size: 0.95rem; }
+
+/* Video grid */
+.vgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 22px; }
+.vid { display: block; text-decoration: none; color: inherit; background: var(--white); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; transition: transform .2s, box-shadow .2s; }
+.vid:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(122, 90, 20, 0.2); }
+.vid .thumb { position: relative; aspect-ratio: 16 / 9; background: #111; }
+.vid .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.vid .play {
+    position: absolute; inset: 0; margin: auto; width: 54px; height: 54px; border-radius: 50%;
+    background: rgba(0, 0, 0, 0.7); border: 2px solid var(--gold-300); color: var(--gold-300);
+    display: flex; align-items: center; justify-content: center; font-size: 1.1rem; padding-left: 4px;
+}
+.vid .meta { padding: 12px 14px 14px; }
+.vid .meta strong { display: block; font-size: 0.98rem; line-height: 1.35; }
+.vid .meta time { font-size: 0.82rem; color: var(--ink-muted); }
+
+/* Podcast */
+.pod { display: grid; grid-template-columns: 220px 1fr; gap: 28px; align-items: start; }
+.pod .cover img { width: 100%; height: auto; border-radius: 8px; display: block; border: 1px solid var(--line); }
+.pod .cover p { margin-top: 12px; font-size: 0.9rem; color: var(--ink-muted); }
+.ep { padding: 18px 20px; margin-bottom: 14px; }
+.ep h3 { font-size: 1.05rem; line-height: 1.35; }
+.ep h3 a { color: var(--ink); text-decoration: none; }
+.ep h3 a:hover { color: var(--gold-800); }
+.ep .when { font-size: 0.82rem; color: var(--ink-muted); margin: 2px 0 8px; }
+.ep p { font-size: 0.93rem; color: var(--ink-muted); margin-bottom: 10px; }
+.ep audio { width: 100%; height: 38px; }
+
+/* About lists */
+.cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+.panel { padding: 26px; }
+.panel h3 { color: var(--gold-800); margin-bottom: 10px; }
+.panel p { color: var(--ink-muted); margin-bottom: 12px; }
+.panel ul { margin: 0 0 12px 44px; color: var(--ink-muted); }
+.panel li { margin-bottom: 6px; }
+
+/* Follow */
+.follow { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+.follow a {
+    display: block; padding: 20px; text-decoration: none; color: var(--ink);
+    background: var(--black); border: 1px solid var(--gold-700); border-radius: 8px; transition: border-color .2s, transform .2s;
+}
+.follow a:hover { border-color: var(--gold-300); transform: translateY(-3px); }
+.follow a strong { display: block; color: var(--gold-300); font-size: 1.05rem; margin-bottom: 4px; }
+.follow a span { color: var(--ivory); font-size: 0.88rem; }
+
+/* Footer */
+footer.site { margin-top: 70px; background: var(--black); color: var(--ivory); border-top: 4px solid var(--gold-500); text-align: center; padding: 44px 20px; position: relative; z-index: 1; }
+footer.site img { width: 170px; height: auto; display: block; margin: 0 auto 16px; mix-blend-mode: screen; }
+footer.site p { margin-bottom: 6px; }
+footer.site a { color: var(--gold-300); }
+footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600; margin-bottom: 14px; }
+
+/* Lightbox */
+.lightbox { position: fixed; inset: 0; z-index: 100; background: rgba(0, 0, 0, 0.88); display: none; align-items: center; justify-content: center; padding: 20px; }
+.lightbox.open { display: flex; }
+.lightbox .box { width: min(960px, 100%); }
+.lightbox .close { display: block; margin: 0 0 10px auto; background: none; border: 1px solid var(--gold-500); color: var(--gold-300); padding: 6px 14px; border-radius: 4px; cursor: pointer; font-size: 0.95rem; }
+
+.hint { font-size: 0.88rem; color: var(--ink-muted); margin-top: 10px; }
+
+@media (max-width: 800px) {
+    .hero .wrap { grid-template-columns: 1fr; padding-top: 34px; padding-bottom: 34px; }
+    .hero h1 { font-size: 2.2rem; }
+    .hero .photo { order: -1; width: min(280px, 100%); }
+    .featured, .pod { grid-template-columns: 1fr; }
+    .pod .cover { max-width: 200px; }
+    .topbar nav a:not(.back) { display: none; }
+    h2.title { font-size: 1.7rem; }
+}
+    </style>
+</head>
+<body>
+    <div class="watermark" aria-hidden="true"></div>
+
+    <header class="topbar">
+        <div class="wrap">
+            <a class="brand" href="https://keynotesunlimited.com" aria-label="Keynotes and Coaching Unlimited"><img src="logo.jpg" alt="Keynotes and Coaching Unlimited"></a>
+            <nav>
+                <a href="#videos">Videos</a>
+                <a href="#podcast">Podcast</a>
+                <a href="#about">About</a>
+                <a href="#follow">Follow</a>
+                <a class="back" href="https://keynotesunlimited.com">All speakers &rarr;</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="wrap">
+            <div>
+                <p class="eyebrow">Keynote Speaker &middot; Leadership &amp; Organization Development</p>
+                <h1>Joanne L. Smikle, PhD</h1>
+                <p class="lead">A respected authority on leadership and organization development who provides keynotes, workshops, and retreats. She prepares leaders for an ever-evolving world.</p>
+                <div class="btns">
+                    <a class="btn" href="#videos">Watch Joanne</a>
+                    <a class="btn ghost" href="#podcast">Listen to the podcast</a>
+                </div>
+            </div>
+            <div class="photo"><img src="img/joanne-6.jpg" alt="Joanne L. Smikle, PhD, holding a microphone"></div>
+        </div>
+    </section>
+
+    <main class="wrap">
+        <!-- Videos -->
+        <section class="block" id="videos">
+            <h2 class="title">Watch Joanne</h2>
+            <p class="sub">Leaders love her keynotes and workshops because when Smikle Speaks, minds move!</p>
+            <div class="featured">
+                <div class="embed">
+                    <iframe src="https://www.youtube-nocookie.com/embed/JaHiHXaHTag?rel=0" title="Joanne L. Smikle, PhD: The Journey to Leadership Excellence" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
+                <div class="card reel">
+                    <h3>Demo reels</h3>
+                    <p>A short demo reel and more clips are on Joanne's YouTube channel. Subscribe to see new videos as they are posted.</p>
+                    <div class="btns">
+                        <a class="btn" href="https://www.youtube.com/@smiklespeaks/videos" target="_blank" rel="noopener">More videos on YouTube</a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="margin:34px 0 14px">Latest from the SmikleSpeaks YouTube channel</h3>
+            <div class="vgrid" id="vgrid"></div>
+            <noscript><p class="hint">Turn on JavaScript to see the latest videos, or visit <a href="https://www.youtube.com/@smiklespeaks">youtube.com/@smiklespeaks</a>.</p></noscript>
+            <p class="hint"><a href="https://www.youtube.com/@smiklespeaks?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a></p>
+        </section>
+
+        <!-- Podcast -->
+        <section class="block" id="podcast">
+            <h2 class="title">The SmikleSpeaks Podcast</h2>
+            <p class="sub">This #1 ranked podcast is heard in 24 countries by over 30,000 listeners.</p>
+            <div class="pod">
+                <div class="cover">
+                    <img id="podcover" src="img/podcast-cover.jpg" alt="SmikleSpeaks Podcast cover art">
+                    <p id="podcount"></p>
+                    <p><a href="https://rss.com/podcasts/smiklespeaks/" target="_blank" rel="noopener">All episodes &rarr;</a></p>
+                </div>
+                <div id="episodes"></div>
+            </div>
+            <noscript><p class="hint">Turn on JavaScript to see the latest episodes, or visit <a href="https://rss.com/podcasts/smiklespeaks/">rss.com/podcasts/smiklespeaks</a>.</p></noscript>
+        </section>
+
+        <!-- About -->
+        <section class="block" id="about">
+            <h2 class="title">About Joanne</h2>
+            <div class="cols">
+                <div class="card panel">
+                    <h3>Why select Joanne?</h3>
+                    <ul>
+                        <li>Her sessions are interactive and thought-provoking</li>
+                        <li>She provides strategies and tools that her audiences actually use</li>
+                        <li>Her goal is to help individuals and organizations reach their most powerful, positive potential</li>
+                    </ul>
+                    <p>Joanne’s keynotes are always curated to the needs of each client. She designs based on client needs and event themes. Here are a few of the most recent keynotes she’s delivered:</p>
+                    <ul>
+                        <li><em>Hassles to Hope</em></li>
+                        <li><em>Why They Stay…Retention &amp; Engagement</em></li>
+                        <li><em>Appreciative Inquiry: Tools for Transforming the Enterprise</em></li>
+                    </ul>
+                </div>
+                <div class="card panel">
+                    <h3>Thought leadership</h3>
+                    <p>Joanne’s thought leadership contributes to the body of practical, usable knowledge.</p>
+                    <ul>
+                        <li>Her insights are available on The SmikleSpeaks Podcast</li>
+                        <li>Tune in to her YouTube channel for virtual leadership learning</li>
+                        <li>She’s authored over 100 published articles that provide actionable knowledge for leaders, featured in both peer-reviewed and practitioner publications. They are available in the library on <a href="https://smiklespeaks.com/" target="_blank" rel="noopener">smiklespeaks.com</a></li>
+                    </ul>
+                    <p>Her greatest professional joy comes from helping organizations, through their leaders, excel. She also offers individual leadership development that goes beyond coaching. This service is for people wanting to write their next chapter or accelerate their trajectories.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Follow -->
+        <section class="block" id="follow">
+            <h2 class="title">Follow Joanne</h2>
+            <div class="follow">
+                <a href="https://www.linkedin.com/in/joannesmikle/" target="_blank" rel="noopener"><strong>LinkedIn</strong><span>Leadership insights and updates</span></a>
+                <a href="https://www.instagram.com/smiklespeaks/" target="_blank" rel="noopener"><strong>Instagram</strong><span>@smiklespeaks</span></a>
+                <a href="https://www.youtube.com/@smiklespeaks" target="_blank" rel="noopener"><strong>YouTube</strong><span>Virtual leadership learning</span></a>
+                <a href="https://rss.com/podcasts/smiklespeaks/" target="_blank" rel="noopener"><strong>The Podcast</strong><span>SmikleSpeaks, every week</span></a>
+                <a href="https://smiklespeaks.com/" target="_blank" rel="noopener"><strong>Articles &amp; tools</strong><span>smiklespeaks.com</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site">
+        <img src="logo.jpg" alt="Keynotes and Coaching Unlimited">
+        <p class="cta">Let’s talk about your needs.</p>
+        <p>Pablo Jusem, Talent Connector</p>
+        <p><a href="https://keynotesunlimited.com">keynotesunlimited.com</a> &middot; meet all our speakers and coaches</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+        <div class="box">
+            <button class="close" id="lbclose" type="button">Close &times;</button>
+            <div class="embed" id="lbembed"></div>
+        </div>
+    </div>
+
+    <script>
+    (function () {
+        // Watermark: faint diamond headshots behind the page
+        var photos = ['joanne-1', 'joanne-4', 'joanne-6', 'joanne-2', 'joanne-5', 'joanne-3'].map(function (n) { return 'img/' + n + '.jpg'; });
+        var D = 170, box = document.querySelector('.watermark');
+        function tiles() {
+            var w = window.innerWidth, h = window.innerHeight, html = '';
+            var rows = Math.ceil(h / (D / 2)) + 2, cols = Math.ceil(w / D) + 2;
+            for (var r = 0; r < rows; r++) for (var c = 0; c < cols; c++) {
+                var x = c * D + (r % 2 ? D / 2 : 0) - D / 2, y = r * (D / 2) - D / 2;
+                html += '<span style="left:' + x + 'px;top:' + y + 'px;background-image:url(' + photos[(c * 3 + r * 5) % photos.length] + ')"></span>';
+            }
+            box.innerHTML = html;
+        }
+        var t; window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(tiles, 150); });
+        tiles();
+
+        function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
+        function fmt(d) { try { return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); } catch (e) { return ''; } }
+        function dur(s) { s = parseInt(s, 10); if (!s) return ''; var m = Math.round(s / 60); return ' &middot; ' + m + ' min'; }
+
+        // Lightbox player
+        var lb = document.getElementById('lightbox'), lbe = document.getElementById('lbembed');
+        function closeLb() { lb.classList.remove('open'); lbe.innerHTML = ''; }
+        document.getElementById('lbclose').addEventListener('click', closeLb);
+        lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
+        document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
+
+        fetch('data/feeds.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
+            // Latest videos
+            var g = document.getElementById('vgrid');
+            g.innerHTML = (d.youtube || []).map(function (v) {
+                return '<a class="vid" href="https://www.youtube.com/watch?v=' + esc(v.id) + '" data-id="' + esc(v.id) + '" target="_blank" rel="noopener">' +
+                    '<div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/' + esc(v.id) + '/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>' +
+                    '<div class="meta"><strong>' + esc(v.title) + '</strong><time>' + esc(fmt(v.published)) + '</time></div></a>';
+            }).join('');
+            g.addEventListener('click', function (e) {
+                var a = e.target.closest('a.vid'); if (!a) return;
+                e.preventDefault();
+                lbe.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + a.dataset.id + '?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+                lb.classList.add('open');
+            });
+
+            // Podcast
+            var p = d.podcast || {};
+            if (p.episodeCount) document.getElementById('podcount').textContent = p.episodeCount + ' episodes and counting';
+            document.getElementById('episodes').innerHTML = (p.episodes || []).map(function (e) {
+                return '<article class="card ep"><h3><a href="' + esc(e.link) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
+                    '<div class="when">' + esc(fmt(e.published)) + dur(e.duration) + '</div>' +
+                    '<p>' + esc(e.summary) + '</p>' +
+                    (e.audio ? '<audio controls preload="none" src="' + esc(e.audio) + '"></audio>' : '') + '</article>';
+            }).join('');
+        }).catch(function () {
+            document.getElementById('vgrid').innerHTML = '<p class="hint">Latest videos are on <a href="https://www.youtube.com/@smiklespeaks">YouTube</a>.</p>';
+            document.getElementById('episodes').innerHTML = '<p class="hint">Latest episodes are at <a href="https://rss.com/podcasts/smiklespeaks/">rss.com/podcasts/smiklespeaks</a>.</p>';
+        });
+    })();
+    </script>
+</body>
+</html>

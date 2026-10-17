@@ -1,0 +1,106 @@
+{
+  "youtube": [
+    {
+      "id": "I5rAvfJDP6c",
+      "title": "Self-Acceptance",
+      "published": "2026-09-17T16:00:11+00:00"
+    },
+    {
+      "id": "KymPRtanPeY",
+      "title": "Competencies 1",
+      "published": "2026-08-13T16:00:36+00:00"
+    },
+    {
+      "id": "-AiufEFTrQA",
+      "title": "Competencies 2",
+      "published": "2026-08-13T16:00:24+00:00"
+    },
+    {
+      "id": "ci90SmzFx84",
+      "title": "Obstacles to Collaboration",
+      "published": "2026-08-13T16:00:19+00:00"
+    },
+    {
+      "id": "yly3ew_eWxY",
+      "title": "Self-Promotion",
+      "published": "2026-07-09T16:00:25+00:00"
+    },
+    {
+      "id": "wCe-SzgmRs8",
+      "title": "Influencers",
+      "published": "2026-07-09T16:00:15+00:00"
+    },
+    {
+      "id": "Ub0scFw4TBw",
+      "title": "Is Your Face in The Place?",
+      "published": "2026-07-09T16:00:04+00:00"
+    },
+    {
+      "id": "OZvB9ZDS4QI",
+      "title": "The Organization",
+      "published": "2026-06-15T19:57:17+00:00"
+    },
+    {
+      "id": "93tTsg6cBiE",
+      "title": "Appreciating Others",
+      "published": "2026-06-15T19:56:41+00:00"
+    }
+  ],
+  "podcast": {
+    "title": "SmikleSpeaks",
+    "link": "https://rss.com/podcasts/smiklespeaks",
+    "image": "https://media.rss.com/smiklespeaks/podcast_cover_20260604_040611_6d1d5f07b274f64be9588bfeeba5f674.jpg",
+    "episodeCount": 325,
+    "episodes": [
+      {
+        "title": "Quick Leadership, Featuring Selena Rezvani, Pt. 2",
+        "published": "2026-10-14T10:27:00+00:00",
+        "link": "https://rss.com/podcasts/smiklespeaks/3159279",
+        "audio": "https://content.rss.com/episodes/12003/3159279/smiklespeaks/2026_09_16_19_38_19_8b7574ef-1aee-499d-b98d-453abaeb29bb.mp3",
+        "duration": "1714",
+        "summary": "Selena Rezvani, best selling author, shares more strategies on how to build trust and become your best leader self."
+      },
+      {
+        "title": "Spirit at Work, Featuring Dericka Canada Cunningham PhD, Pt.2",
+        "published": "2026-10-07T11:00:00+00:00",
+        "link": "https://rss.com/podcasts/smiklespeaks/3059471",
+        "audio": "https://content.rss.com/episodes/12003/3059471/smiklespeaks/2026_08_10_19_33_13_2af30b88-d075-432c-8b1d-b479006461ea.mp3",
+        "duration": "1682",
+        "summary": "Are you comfortable bringing your whole self to the work world? Do you allow yourself to be guided by your core values and spiritual convictions? Dericka Canada Cunningham, PhD guides us in considering the ways that we can be whole…"
+      },
+      {
+        "title": "Understanding Healthcare Disparities, Featuring Dr. Alyx Porter Umphrey, Pt. 2",
+        "published": "2026-09-30T09:25:00+00:00",
+        "link": "https://rss.com/podcasts/smiklespeaks/3059437",
+        "audio": "https://content.rss.com/episodes/12003/3059437/smiklespeaks/2026_08_10_19_23_41_249affb8-4727-41b0-9fae-d11aa4dba1b5.mp3",
+        "duration": "1454",
+        "summary": "We go deeper in our understanding of healthcare disparities in this second part of my conversation with Dr. Alyx Porter Umphrey. She explains the difference between health disparities and healthcare disparities. They sound similar but…"
+      },
+      {
+        "title": "Quick Leadership, Featuring Selena Rezvani, Pt. 1",
+        "published": "2026-09-23T10:29:00+00:00",
+        "link": "https://rss.com/podcasts/smiklespeaks/3159253",
+        "audio": "https://content.rss.com/episodes/12003/3159253/smiklespeaks/2026_09_16_19_29_19_3ca8f5a3-fd47-4c29-94b5-016c64b4e289.mp3",
+        "duration": "1807",
+        "summary": "How can you become the leader that people want to work with? Selena Rezvani shares strategies from her latest book, Quick Leadership . She's a popular speaker, accomplished consultant, and wonderful human. Listen, learn, and share!"
+      },
+      {
+        "title": "A Victor's Story, Featuring Tammy Saul, Pt. 2",
+        "published": "2026-09-16T09:16:00+00:00",
+        "link": "https://rss.com/podcasts/smiklespeaks/2945828",
+        "audio": "https://content.rss.com/episodes/12003/2945828/smiklespeaks/2026_06_26_15_57_30_278bbce7-36d8-4dc2-b80a-97f95528dd8a.mp3",
+        "duration": "1983",
+        "summary": "Tammy Saul is back! CEO of Federal Hill Mortgage, she the official #1 producing female loan officer in the United States for units, according to The Scotsman Guide , the official ranking source for loan officers. If you didn’t hear our…"
+      },
+      {
+        "title": "Understanding Healthcare Disparities, Featuring Dr. Alyx Porter Umphrey, Pt. 1",
+        "published": "2026-09-09T09:15:00+00:00",
+        "link": "https://rss.com/podcasts/smiklespeaks/3059416",
+        "audio": "https://content.rss.com/episodes/12003/3059416/smiklespeaks/2026_08_10_19_14_37_d7f6fd8a-352d-434f-8ce1-e8cecbba9538.mp3",
+        "duration": "1961",
+        "summary": "The term \"healthcare disparities\" is used frequently. It's a topic worth exploring because it impacts so many different people, people you may not have imagined. Renowned physician, Dr. Alyx Porter Umphrey, breaks it down in practical…"
+      }
+    ]
+  },
+  "updated": "2026-10-17T17:41:56+00:00"
+}
