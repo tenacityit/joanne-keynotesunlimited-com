@@ -95,9 +95,9 @@ h2.title::after { content: "\25C6"; display: block; font-size: 0.8rem; color: va
 }
 
 /* Featured video + reel */
-.featured { display: grid; grid-template-columns: 1.5fr 1fr; gap: 24px; align-items: start; }
+.featured { display: grid; grid-template-columns: 1fr; gap: 24px; align-items: start; }
 .embed { aspect-ratio: 16 / 9; background: var(--black); border-radius: 6px; overflow: hidden; }
-.embed iframe { width: 100%; height: 100%; border: 0; display: block; }
+.embed video, .embed iframe { width: 100%; height: 100%; border: 0; display: block; }
 .reel { padding: 26px; }
 .reel h3 { color: var(--gold-800); margin-bottom: 8px; }
 .reel p { color: var(--ink-muted); margin-bottom: 14px; font-size: 0.95rem; }
@@ -208,30 +208,61 @@ footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600;
         <!-- Videos -->
         <section class="block" id="videos">
             <h2 class="title">Watch Joanne</h2>
-            <p class="sub">Leaders love her keynotes and workshops because when Smikle Speaks, minds move!</p>
+            <p class="sub">Leaders love her keynotes and workshops because when SmikleSpeaks, minds move!</p>
             <div class="featured">
                 <div class="embed">
-                    <iframe src="https://www.youtube-nocookie.com/embed/JaHiHXaHTag?rel=0" title="Joanne L. Smikle, PhD: The Journey to Leadership Excellence" loading="lazy" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                    <video controls preload="metadata" poster="video/demo-reel-a-poster.jpg" playsinline>
+                        <source src="video/demo-reel-a.mp4" type="video/mp4">
+                    </video>
                 </div>
                 <div class="card reel">
                     <h3>Demo reels</h3>
-                    <p>A short demo reel and more clips are on Joanne's YouTube channel. Subscribe to see new videos as they are posted.</p>
+                    <p>She provides real tools that leaders actually use. Book her for your next keynote, workshop, or event.</p>
                     <div class="btns">
                         <a class="btn" href="https://www.youtube.com/@smiklespeaks/videos" target="_blank" rel="noopener">More videos on YouTube</a>
                     </div>
                 </div>
             </div>
 
-            <h3 style="margin:34px 0 14px">Latest from the SmikleSpeaks YouTube channel</h3>
-            <div class="vgrid" id="vgrid"></div>
-            <noscript><p class="hint">Turn on JavaScript to see the latest videos, or visit <a href="https://www.youtube.com/@smiklespeaks">youtube.com/@smiklespeaks</a>.</p></noscript>
+            <h3 style="margin:34px 0 14px">Popular Content from the SmikleSpeaks YouTube Channel</h3>
+            <div class="vgrid">
+                <a class="vid" href="https://www.youtube.com/watch?v=d_jNFaPuD6s" data-id="d_jNFaPuD6s" target="_blank" rel="noopener">
+                    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/d_jNFaPuD6s/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>
+                    <div class="meta"><strong>Brand Sabotage</strong></div>
+                </a>
+                <a class="vid" href="https://www.youtube.com/watch?v=PXqBpQGXEC4" data-id="PXqBpQGXEC4" target="_blank" rel="noopener">
+                    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/PXqBpQGXEC4/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>
+                    <div class="meta"><strong>Integrated Strategies for Developing High Potential Leaders</strong></div>
+                </a>
+                <a class="vid" href="https://www.youtube.com/watch?v=cPFaV7LCYdI" data-id="cPFaV7LCYdI" target="_blank" rel="noopener">
+                    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/cPFaV7LCYdI/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>
+                    <div class="meta"><strong>The Difference Between Work Groups and Teams</strong></div>
+                </a>
+            </div>
             <p class="hint"><a href="https://www.youtube.com/@smiklespeaks?sub_confirmation=1" target="_blank" rel="noopener">Subscribe on YouTube</a></p>
+
+            <h3 style="margin:34px 0 4px">Reels</h3>
+            <p class="sub" style="margin-bottom:14px">Short bites of leadership learning.</p>
+            <div class="vgrid">
+                <a class="vid" href="https://www.youtube.com/watch?v=iOGIerWAyO4" data-id="iOGIerWAyO4" target="_blank" rel="noopener">
+                    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/iOGIerWAyO4/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>
+                    <div class="meta"><strong>Career Setbacks Pt. 1</strong></div>
+                </a>
+                <a class="vid" href="https://www.youtube.com/watch?v=hy4uZyxyDzU" data-id="hy4uZyxyDzU" target="_blank" rel="noopener">
+                    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/hy4uZyxyDzU/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>
+                    <div class="meta"><strong>Self Leadership</strong></div>
+                </a>
+                <a class="vid" href="https://www.youtube.com/watch?v=o_rztJ8ts08" data-id="o_rztJ8ts08" target="_blank" rel="noopener">
+                    <div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/o_rztJ8ts08/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>
+                    <div class="meta"><strong>Change What You&rsquo;re Giving</strong></div>
+                </a>
+            </div>
         </section>
 
         <!-- Podcast -->
         <section class="block" id="podcast">
             <h2 class="title">The SmikleSpeaks Podcast</h2>
-            <p class="sub">This #1 ranked podcast is heard in 24 countries by over 30,000 listeners.</p>
+            <p class="sub">This #1 ranked podcast, heard in more than 24 countries and by over 37,000 listeners, delivers actionable strategies for leaders at all levels.</p>
             <div class="pod">
                 <div class="cover">
                     <img id="podcover" src="img/podcast-cover.jpg" alt="SmikleSpeaks Podcast cover art">
@@ -319,8 +350,7 @@ footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600;
         tiles();
 
         function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]; }); }
-        function fmt(d) { try { return new Date(d).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }); } catch (e) { return ''; } }
-        function dur(s) { s = parseInt(s, 10); if (!s) return ''; var m = Math.round(s / 60); return ' &middot; ' + m + ' min'; }
+        function dur(s) { s = parseInt(s, 10); if (!s) return ''; var m = Math.round(s / 60); return m + ' min'; }
 
         // Lightbox player
         var lb = document.getElementById('lightbox'), lbe = document.getElementById('lbembed');
@@ -329,32 +359,24 @@ footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600;
         lb.addEventListener('click', function (e) { if (e.target === lb) closeLb(); });
         document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLb(); });
 
-        fetch('data/feeds.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
-            // Latest videos
-            var g = document.getElementById('vgrid');
-            g.innerHTML = (d.youtube || []).map(function (v) {
-                return '<a class="vid" href="https://www.youtube.com/watch?v=' + esc(v.id) + '" data-id="' + esc(v.id) + '" target="_blank" rel="noopener">' +
-                    '<div class="thumb"><img loading="lazy" src="https://i.ytimg.com/vi/' + esc(v.id) + '/hqdefault.jpg" alt=""><span class="play">&#9654;</span></div>' +
-                    '<div class="meta"><strong>' + esc(v.title) + '</strong><time>' + esc(fmt(v.published)) + '</time></div></a>';
-            }).join('');
-            g.addEventListener('click', function (e) {
-                var a = e.target.closest('a.vid'); if (!a) return;
-                e.preventDefault();
-                lbe.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + a.dataset.id + '?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
-                lb.classList.add('open');
-            });
+        document.addEventListener('click', function (e) {
+            var a = e.target.closest('a.vid'); if (!a) return;
+            e.preventDefault();
+            lbe.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + a.dataset.id + '?autoplay=1&rel=0" title="Video" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+            lb.classList.add('open');
+        });
 
+        fetch('data/feeds.json', { cache: 'no-cache' }).then(function (r) { return r.json(); }).then(function (d) {
             // Podcast
             var p = d.podcast || {};
             if (p.episodeCount) document.getElementById('podcount').textContent = p.episodeCount + ' episodes and counting';
             document.getElementById('episodes').innerHTML = (p.episodes || []).map(function (e) {
                 return '<article class="card ep"><h3><a href="' + esc(e.link) + '" target="_blank" rel="noopener">' + esc(e.title) + '</a></h3>' +
-                    '<div class="when">' + esc(fmt(e.published)) + dur(e.duration) + '</div>' +
+                    '<div class="when">' + dur(e.duration) + '</div>' +
                     '<p>' + esc(e.summary) + '</p>' +
                     (e.audio ? '<audio controls preload="none" src="' + esc(e.audio) + '"></audio>' : '') + '</article>';
             }).join('');
         }).catch(function () {
-            document.getElementById('vgrid').innerHTML = '<p class="hint">Latest videos are on <a href="https://www.youtube.com/@smiklespeaks">YouTube</a>.</p>';
             document.getElementById('episodes').innerHTML = '<p class="hint">Latest episodes are at <a href="https://rss.com/podcasts/smiklespeaks/">rss.com/podcasts/smiklespeaks</a>.</p>';
         });
     })();

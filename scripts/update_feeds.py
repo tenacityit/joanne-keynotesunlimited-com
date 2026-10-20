@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Pull Joanne's public YouTube and podcast feeds into data/feeds.json.
+"""Pull Joanne's picked podcast episodes into data/feeds.json.
 
 Run on a schedule by .github/workflows/update-feeds.yml. Standard library only.
 """
@@ -13,10 +13,12 @@ from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-YOUTUBE_CHANNEL_ID = "UCXnAm7IqiOkTIQnAVfkzKlg"  # @smiklespeaks
 PODCAST_FEED = "https://media.rss.com/smiklespeaks/feed.xml"
-MAX_VIDEOS = 9
-MAX_EPISODES = 6
+PICKED_EPISODES = [  # Joanne's hand-picked episodes, shown in this order (exact feed titles)
+    "Courageous Leadership",
+    "How Leaders Create Conflict",
+    "Resilience is not...",
+]
 OUT = Path(__file__).resolve().parent.parent / "data" / "feeds.json"
 
 NS = {
@@ -39,23 +41,15 @@ def clean(text, limit=240):
     return text if len(text) <= limit else text[: limit - 1].rsplit(" ", 1)[0] + "…"
 
 
-def youtube():
-    root = ET.fromstring(fetch(f"https://www.youtube.com/feeds/videos.xml?channel_id={YOUTUBE_CHANNEL_ID}"))
-    videos = []
-    for e in root.findall("atom:entry", NS)[:MAX_VIDEOS]:
-        videos.append({
-            "id": e.findtext("yt:videoId", namespaces=NS),
-            "title": e.findtext("atom:title", namespaces=NS),
-            "published": e.findtext("atom:published", namespaces=NS),
-        })
-    return videos
-
-
 def podcast():
     ch = ET.fromstring(fetch(PODCAST_FEED)).find("channel")
     img = ch.find("itunes:image", NS)
+    items = {it.findtext("title"): it for it in ch.findall("item")}
+    missing = [t for t in PICKED_EPISODES if t not in items]
+    if missing:
+        raise RuntimeError(f"picked episodes not in feed: {missing}")
     episodes = []
-    for it in ch.findall("item")[:MAX_EPISODES]:
+    for it in (items[t] for t in PICKED_EPISODES):
         enc = it.find("enclosure")
         episodes.append({
             "title": it.findtext("title"),
@@ -75,20 +69,20 @@ def podcast():
 
 
 def main():
-    data = {"youtube": [], "podcast": {}}
+    data = {"podcast": {}}
     errors = []
-    for key, fn in (("youtube", youtube), ("podcast", podcast)):
+    for key, fn in (("podcast", podcast),):
         try:
             data[key] = fn()
         except Exception as exc:  # keep the previous data for a feed that fails
             errors.append(f"{key}: {exc}")
     if errors and OUT.exists():
         old = json.loads(OUT.read_text())
-        for key in ("youtube", "podcast"):
+        for key in ("podcast",):
             if not data[key]:
                 data[key] = old.get(key, data[key])
-    if not data["youtube"] and not data["podcast"]:
-        print("both feeds failed:", *errors, sep="\n", file=sys.stderr)
+    if not data["podcast"]:
+        print("podcast feed failed:", *errors, sep="\n", file=sys.stderr)
         sys.exit(1)
     OUT.parent.mkdir(exist_ok=True)
     if OUT.exists():
@@ -99,7 +93,7 @@ def main():
             return
     data["updated"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     OUT.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n")
-    print(f"wrote {OUT}: {len(data['youtube'])} videos, {len(data['podcast'].get('episodes', []))} episodes", *errors)
+    print(f"wrote {OUT}: {len(data['podcast'].get('episodes', []))} episodes", *errors)
 
 
 if __name__ == "__main__":
