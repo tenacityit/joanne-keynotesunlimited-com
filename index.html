@@ -147,6 +147,14 @@ h2.title::after { content: "\25C6"; display: block; font-size: 0.8rem; color: va
 .follow a strong { display: block; color: var(--gold-300); font-size: 1.05rem; margin-bottom: 4px; }
 .follow a span { color: var(--ivory); font-size: 0.88rem; }
 
+/* Stats bar */
+.stats { position: relative; z-index: 1; margin-top: 64px; background: rgba(255, 255, 255, 0.92); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 34px 0 30px; }
+.stats .wrap { display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px; }
+.stat .num { font-weight: 700; font-size: 2.7rem; color: var(--gold-800); line-height: 1; letter-spacing: -0.015em; }
+.stat .label { font-weight: 600; font-size: 0.76rem; letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink); margin-top: 11px; }
+.stat p { font-size: 0.98rem; color: var(--ink-muted); line-height: 1.55; margin-top: 9px; }
+.stats + footer.site { margin-top: 0; }
+
 /* Footer */
 footer.site { margin-top: 70px; background: var(--black); color: var(--ivory); border-top: 4px solid var(--gold-500); text-align: center; padding: 44px 20px; position: relative; z-index: 1; }
 footer.site img { width: 170px; height: auto; display: block; margin: 0 auto 16px; mix-blend-mode: screen; }
@@ -170,6 +178,8 @@ footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600;
     .pod .cover { max-width: 200px; }
     .topbar nav a:not(.back) { display: none; }
     h2.title { font-size: 1.7rem; }
+    .stats { margin-top: 44px; padding: 28px 0 24px; }
+    .stats .wrap { grid-template-columns: 1fr; gap: 24px; }
 }
     </style>
 </head>
@@ -262,7 +272,7 @@ footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600;
         <!-- Podcast -->
         <section class="block" id="podcast">
             <h2 class="title">The SmikleSpeaks Podcast</h2>
-            <p class="sub">This #1 ranked podcast, heard in more than 24 countries and by over 37,000 listeners, delivers actionable strategies for leaders at all levels.</p>
+            <p class="sub">This #1 ranked podcast, heard in 64 countries and by more than 37,000 listeners, delivers actionable strategies for leaders at all levels.</p>
             <div class="pod">
                 <div class="cover">
                     <img id="podcover" src="img/podcast-cover.jpg" alt="SmikleSpeaks Podcast cover art">
@@ -317,6 +327,26 @@ footer.site .cta { font-size: 1.15rem; color: var(--gold-300); font-weight: 600;
             </div>
         </section>
     </main>
+
+    <section class="stats" aria-label="Joanne at a glance">
+        <div class="wrap">
+            <div class="stat">
+                <div class="num">100+</div>
+                <div class="label">Published Articles</div>
+                <p>Featured in practitioner-oriented and peer-reviewed publications.</p>
+            </div>
+            <div class="stat">
+                <div class="num">37,477</div>
+                <div class="label">Podcast Listeners</div>
+                <p>The <em>SmikleSpeaks</em> podcast reaches leaders and learners in 64 countries.</p>
+            </div>
+            <div class="stat">
+                <div class="num">20+</div>
+                <div class="label">Years Consulting</div>
+                <p>Advising private, public, and nonprofit organizations nationwide.</p>
+            </div>
+        </div>
+    </section>
 
     <footer class="site">
         <img src="logo.jpg" alt="Keynotes and Coaching Unlimited">
